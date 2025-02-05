@@ -1,5 +1,5 @@
 import react, { useEffect, useState } from "react";
-import "./app.css";
+import "./App.css";
 import SearchIcon from "./search.svg";
 import MovieCard from "./MovieCard.jsx";
 
@@ -19,6 +19,9 @@ const App = () => {
   useEffect(() => {
     searchMovies("Batman");
   }, []);
+
+  const SHEET_URL = process.env.REACT_APP_SPREADSHEET_URL;
+  console.log(SHEET_URL);
 
   return (
     <div className="app">
